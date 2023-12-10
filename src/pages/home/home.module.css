@@ -1,0 +1,353 @@
+.imgContainerBanner{
+  margin: 0;
+  width: 100%;
+}
+
+.imgContainerBanner img{
+  width: 100%;
+}
+
+.titleVoz{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.titleVoz h1{
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+  color: azure;
+}
+
+.titleVoz1{
+  font-size: 18px;
+  text-align: center;
+  color: var(--text-title1);
+}
+
+.titleVoz2{
+  font-size: 18px;
+  text-align: center;
+  color: var(--text-title2);
+}
+
+.tecnicasVoz{
+  padding: 30px 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background1);
+}
+
+.tecnicasVozBox{
+  margin: 50px 0;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.boxTitle1 h1, .boxTitle2 h1{
+  font-size: 25px;
+  font-family: 'Bebas' !important;
+  color: var(--background4);
+  transition: color 2s;
+}
+
+.tecnicasVozBox:hover h1:nth-child(1){
+  color: var(--text-title2);
+  /* transition: all ease-in-out 2s; */
+}
+
+.tecnicasVozBox div{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tecnicasVozBox div:nth-child(2){
+  margin: 15px 0;
+  width: 10%;
+  height: 2px;
+  background-color: var(--background4);
+  transition: 2.5s;
+}
+
+.tecnicasVozBox:hover div:nth-child(2){
+  width: 65%;
+  background-color: var(--text-title1); 
+}
+
+.box1, .box2{
+  width: auto !important;
+}
+
+.box1 p, .box2 p{
+  font-size: 14.5px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.tecnicasVozBox h2{
+  font-size: 18px;
+}
+
+.boxYmas{
+  margin: 50px 0;
+}
+
+.boxYmas h1{
+  font-size: 18px;
+  color: var(--text-title2);
+}
+
+.containerMainBlog{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--background2);
+}
+
+.containerMainBlog h1{
+  margin-top: 80px;
+  font-size: 16px;
+}
+
+.containerMainBlog span{
+  font-size: 18px;
+  color: var(--text-title1);
+}
+
+.containerMainBlog h1:nth-child(3){
+  margin: 0 0 80px 0;
+}
+
+.containerMainBlog h1:nth-child(3) span{
+  color: var(--text-title2);
+  cursor: pointer;
+}
+
+.imgContainerBlog{
+  padding: 15px;
+  margin: 50px;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+
+.imgContainerBlog img{
+  width: 100%;
+  height: auto;
+  transition: transform 2s;
+  cursor: pointer;
+}
+
+.imgContainerBlog:hover img{
+  transform: scale(1.1);
+}
+
+.imgBoxBlog{
+  overflow: hidden; 
+}
+
+.containerArticulo{
+  width: 92.5%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .8);
+  position: absolute;
+  bottom: 15px;
+  
+}
+
+.containerArticulo h2{
+  margin: 0;
+  font-family: 'Bebas' !important;
+  font-size: 16px;
+  font-weight: 200;
+  color: var(--text-title1);
+
+}
+
+.containerArticulo p{
+  top: 0;
+  font-size: 12.5px;
+  text-align: justify;
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1600px) {
+
+  .titleVoz{
+    padding: 120px 0;
+    height: auto;
+  }
+
+  .titleVoz h1{
+    font-size: 30px;
+  }
+
+  .titleVoz1{
+    font-size: 38px;
+  }
+
+  .titleVoz2{
+    font-size: 38px;
+  }
+
+  .tecnicasVozBox{
+    margin-top: 0px;
+    width: 100%;
+    height: 200px;
+    flex-direction: initial;
+  }
+
+  .tecnicasVozBox:nth-child(1){
+    margin-top: 20px;
+  }
+
+  .tecnicasVozBox:nth-child(2n){
+    flex-direction: row-reverse;
+  }
+
+  .tecnicasVozBox div{
+    margin-top: 0px;
+    width: auto;
+    
+  }
+
+  .boxTitle1{
+    justify-content: flex-end;
+  }
+
+  .boxTitle2{
+    justify-content: flex-start;
+  }
+
+  .tecnicasVozBox div:nth-child(2){
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 3px;
+    height: 50px;
+  }
+
+  .tecnicasVozBox:hover div:nth-child(2){
+    width: 3px;
+    height: 150px;
+    background-color: var(--text-title1); 
+  }
+
+  .box1, .box2{
+    width: auto !important;
+  }
+
+  .box1 p, .box2 p{
+    font-weight: 200;
+  }
+
+  .tecnicasVozBox h1{
+    font-size: 40px;
+  }
+
+  .boxYmas{
+    margin: 0 0 100px 0;
+  }
+
+  .boxYmas h1{
+    font-size: 40px;
+    color: var(--text-title2);
+  }
+
+  .containerMainBlog{
+    padding: 30px 0;
+  }
+
+  .containerMainBlog h1{
+    font-size: 30px;
+  }
+
+  .containerMainBlog h1:nth-child(3){
+    margin: 10px 0 100px 0;
+  }
+
+  .containerMainBlog span{
+    font-size: 35px;
+    color: var(--text-title1);
+  }
+
+  .containerMainBlog h1:nth-child(3) span{
+    color: var(--text-title2);
+    cursor: pointer;
+  }
+
+  .imgContainerBlog{
+    padding: 15px;
+    margin: 50px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+  }
+
+  .imgContainerBlog img{
+    width: 100%;
+    height: auto;
+    transition: transform 2s;
+  }
+
+  .imgContainerBlog:hover img{
+    transform: scale(1.1);
+  }
+
+  .imgBoxBlog{
+    overflow: hidden;
+  }
+
+  .containerArticulo{
+    width: 92.5%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    bottom: 15px;
+  }
+
+  .containerArticulo h2{
+    margin: 0;
+    font-family: 'Bebas' !important;
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--text-title1);
+
+  }
+
+  .containerArticulo p{
+    top: 0;
+    font-size: 12.5px;
+    text-align: justify;
+  }
+
+}

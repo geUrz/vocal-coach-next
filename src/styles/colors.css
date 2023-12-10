@@ -1,0 +1,16 @@
+:root{
+  --background1: rgba(18, 18, 18);
+  --background2: rgba(25, 25, 25);
+  --background3: rgba(35, 35, 35);
+  --background4: rgba(50, 50, 50);
+  --bg-box: rgb(0, 202, 222);
+  --bg-boxtrans: rgb(0, 202, 222, .3);
+  --bg-boxhover: rgb(0, 188, 209);
+  --bg-btn-primary: rgb(0, 202, 222);
+  --bg-btn-hover-primary: rgb(0, 188, 209);
+  --bg-btn-secondary: rgba(195, 51, 248);
+  --bg-btn-hover-secondary: rgb(186, 3, 252);
+  --text-title1: rgb(0, 202, 222);
+  --text-title2: rgba(195, 51, 248);
+
+}
