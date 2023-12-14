@@ -5,11 +5,14 @@ import { BasicLayout } from "@/layouts"
 import { Image } from "semantic-ui-react"
 import { Bloghome } from "@/api"
 import styles from './home.module.css'
+import { useAuth } from "@/hooks"
+import { BoxAdd } from "@/components/BoxAdd"
 
 const ctrlBlog = new Bloghome()
 
 export default function Home() {
 
+  const {user} = useAuth()
   const [blogs, setBlogs] = useState(null) 
 
   useEffect(() => {
@@ -80,6 +83,13 @@ export default function Home() {
           ))}
         </div>
         <h1>¡ Visita nuestro <Link href='/blog'><span>Blog</span></Link> para ver todos los eventos !</h1>
+        {user ? (
+          <div className={styles.boxAdd}>
+            <BoxAdd />
+          </div>
+        ) : (
+          ''
+        )}
       </div>
     </BasicLayout>
   )

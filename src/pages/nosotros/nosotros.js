@@ -1,13 +1,17 @@
 import { useState, useEffect } from 'react'
 import { map } from 'lodash'
+import { useAuth } from '@/hooks'
 import { BasicLayout } from '@/layouts'
 import { Nosotros as nosotrosApi } from '@/api'
 import { Image } from 'semantic-ui-react'
 import styles from './nosotros.module.css'
+import { BoxAdd } from '@/components/BoxAdd'
 
 const ctrlNosotros = new nosotrosApi()
 
 export default function Nosotros() {
+
+  const {user} = useAuth()
 
   const [nosotros, setNosotros] = useState(null)
 
@@ -43,6 +47,13 @@ export default function Nosotros() {
                   <h2>Vocal Coach</h2>
                   <p>{nosotro.attributes.parrafonosotros}</p>
                 </div> 
+                <div className={styles.boxAdd}>
+                  {user ? (
+                    <BoxAdd />
+                  ) : (
+                    ''
+                  )}
+                </div>
               </div>
               <div>
                 <div className={styles.imgContainerNosotros}>
@@ -54,6 +65,13 @@ export default function Nosotros() {
                   <h2>nuestro coach</h2>
                   <p>{nosotro.attributes.parrafocoach}</p>
                 </div> 
+                <div className={styles.boxAdd}>
+                  {user ? (
+                    <BoxAdd />
+                  ) : (
+                    ''
+                  )}
+                </div>
               </div>
           </div>
         ))}
@@ -74,6 +92,13 @@ export default function Nosotros() {
               </div>
           </div>
         ))}
+        <div className={styles.boxAdd}>
+          {user ? (
+            <BoxAdd />
+          ) : (
+            ''
+          )}
+        </div>
       </div>
     </BasicLayout>
   )

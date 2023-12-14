@@ -195,6 +195,10 @@
   text-align: justify;
 }
 
+.boxAdd{
+  margin-bottom: 50px;
+}
+
 
 @media screen and (min-width: 800px) and (max-width: 1600px) {
 

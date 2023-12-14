@@ -37,6 +37,17 @@
   background-color: var(--background1);
 }
 
+.containerMainNosotros > div > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxAdd{
+  margin-top: 20px;
+}
+
 .imgContainerNosotros{
   margin-top: 80px;
   padding: .8rem;

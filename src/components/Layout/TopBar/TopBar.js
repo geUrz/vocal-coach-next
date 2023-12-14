@@ -1,17 +1,41 @@
+import { useState } from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { useAuth } from '@/hooks'
 import { Image } from 'semantic-ui-react'
+import { FaBars, FaHome, FaSignOutAlt, FaUser, FaWindowClose } from 'react-icons/fa'
+import { BiHome, BiMenu, BiUser } from 'react-icons/bi'
 import styles from './TopBar.module.css'
 
 
 export function TopBar() {
 
+  const {user, logout} = useAuth()
+
+  const router = useRouter()
+
+  const [menu, setMenu] = useState()
+
+  const menuOpen = () => {
+    setMenu(prevState => !prevState)
+  }
+
+  const logoutSignin = () => {
+    //router.push('/')
+    //onReload()
+    logout()
+  }
+
   return (
-    <div className={styles.topBar}>
+
+    <>
+    <div className={styles.containerMenu}>
       <div className={styles.logo}>
         <Link href='/'>
           <Image src='/img/logo.png' alt='Logo' />
         </Link>
       </div>
+
       <div className={styles.menu}>
         <Link href='/'>
           HOME
@@ -26,6 +50,57 @@ export function TopBar() {
           CONTÁCTANOS
         </Link>
       </div>
+
+      <div className={styles.iconBar}>
+        <div  onClick={menuOpen}>
+          {menu ? (
+           <FaWindowClose />
+          ) : (
+            <FaBars />
+          )}
+        </div>
+      </div>
+
+      <div className= {styles.containerMenuSide} style={{left : menu ? '0' : '-100%'}}>
+        <div className={styles.topMenuSide}>
+          <Link href='/'>
+            <FaHome />
+          {/* <Image 
+            src='/img/home.png' alt='home' 
+            onClick={menuOpen} /> */}
+          </Link>
+        </div>   
+        <div className={styles.listaMenuSide}>
+          <Link href='/blog'>
+            <div>
+              Blog
+            </div>
+          </Link>
+          <Link href='/nosotros'>
+            <div>
+              Nosotros
+            </div>
+          </Link>
+          <Link href='/contactanos'>
+            <div>
+              Contáctanos
+            </div>
+          </Link>
+        </div>   
+      </div>
     </div>
+
+    <div className={styles.iconLogout}>
+      {user ? (
+        <div onClick={logoutSignin}>
+          <FaSignOutAlt />
+        </div>
+      ) : (
+        ''
+      )}
+    </div>
+
+  </>
+
   )
 }
