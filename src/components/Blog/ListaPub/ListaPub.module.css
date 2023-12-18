@@ -1,0 +1,19 @@
+.listEmpty{
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.listEmpty img{
+  height: 25px;
+}
+
+.listEmpty h1{
+  margin-top: 10px;
+  font-size: small;
+  font-weight: 200;
+  color: azure;
+}

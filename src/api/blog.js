@@ -1,4 +1,4 @@
-import { ENV } from "@/utils"
+import { ENV, authFetch } from "@/utils"
 
 export class Blog{
   async getAll(){
@@ -18,13 +18,14 @@ export class Blog{
         throw error
     }
   }
-}
 
-export class Bloghome{
-  async getBloghome(){
+  async getOne(){
     try {
+      const sortFilter = 'sort=publishedAt:desc'
+      const paginationFilter = 'pagination[pageSize]=1'
       const populateFilter = 'populate=*'
-      const url = `${ENV.API_URL}/${ENV.ENDPOINTS.BLOGHOME}?${populateFilter}`
+      const filters = `${sortFilter}&${populateFilter}&${paginationFilter}` 
+      const url = `${ENV.API_URL}/${ENV.ENDPOINTS.BLOG}?${filters}`
       const response = await fetch(url)
       const result = await response.json()
 
@@ -36,5 +37,76 @@ export class Bloghome{
         throw error
     }
   }
+
+  async create(data, userId){
+    try {
+      const url = `${ENV.API_URL}/${ENV.ENDPOINTS.BLOG}`
+      const params = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ data: {
+        ...data,
+        user: userId,
+      },
+    }),
+    }
+
+    const response = await authFetch(url, params)
+    const result = await response.json()
+
+    if(response.status !== 200) throw result
+
+      return result
+
+    } catch (error) {
+       throw error
+    }
+  }
+
+  async update(data, pubId){
+    try {
+      const url = `${ENV.API_URL}/${ENV.ENDPOINTS.BLOG}/${pubId}`
+      const params = {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({data}),
+    }
+
+    const response = await authFetch(url, params)
+    const result = await response.json()
+
+    if(response.status !== 200) throw result
+
+      return result
+
+    } catch (error) {
+       throw error
+    }
+  }
+
+  async delete(blogId){
+    try {
+      const url = `${ENV.API_URL}/${ENV.ENDPOINTS.BLOG}/${blogId}`
+        const params = {
+          method: 'DELETE',
+        }
+
+        const response = await authFetch(url, params)
+        const result = await response.json()
+
+        if(response.status !== 200) throw result
+
+        return result
+
+    } catch (error) {
+        throw error
+    }
+  }
+
 }
+
 

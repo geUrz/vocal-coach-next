@@ -9,6 +9,11 @@
   border-color: darkgray !important;
 }
 
+.ui.form select{
+  color: darkgray !important;
+  background-color: var(--background3) !important;
+}
+
 
 .fields{
   display: flex;

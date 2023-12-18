@@ -5,7 +5,7 @@ import { BasicLayout } from '@/layouts'
 import { Nosotros as nosotrosApi } from '@/api'
 import { Image } from 'semantic-ui-react'
 import styles from './nosotros.module.css'
-import { BoxAdd } from '@/components/BoxAdd'
+import { BoxAdd } from '@/components/BoxEdit'
 
 const ctrlNosotros = new nosotrosApi()
 

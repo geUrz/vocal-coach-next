@@ -1,30 +1,12 @@
-import { useState, useEffect } from "react"
 import Link from "next/link"
-import { map } from "lodash"
 import { BasicLayout } from "@/layouts"
 import { Image } from "semantic-ui-react"
-import { Bloghome } from "@/api"
+import { ListaPub } from "@/components/BlogHome"
 import styles from './home.module.css'
-import { useAuth } from "@/hooks"
-import { BoxAdd } from "@/components/BoxAdd"
 
-const ctrlBlog = new Bloghome()
+export default function Home(props) {
 
-export default function Home() {
-
-  const {user} = useAuth()
-  const [blogs, setBlogs] = useState(null) 
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await ctrlBlog.getBloghome()
-        setBlogs(response.data)
-      } catch (error) {
-          console.error(error)
-      }
-    })()
-  }, [])
+  
 
   return (
     <BasicLayout relative>
@@ -66,31 +48,13 @@ export default function Home() {
       </div>
 
       <div className={styles.containerMainBlog}>
-        <h1>Eventos y conciertos de <span> Vocal Coach</span></h1>
-        <div className={styles.imgContainerBlog}>
-          {map (blogs, (blog) => (
-            <Link href='/blog'>
-            <div key={blog.id}>
-              <div className={styles.imgBoxBlog}>
-                <Image src={blog.attributes.image.data.attributes.url} alt='ev1' />
-              </div>
-              <div className={styles.containerArticulo}>
-                <h2>{blog.attributes.title}</h2>
-                <p>{blog.attributes.content}</p>
-              </div>
-            </div>
-            </Link>
-          ))}
-        </div>
+        <h1>Evento mas reciente de <span> Vocal Coach</span></h1>
+
+          <ListaPub />
+          
         <h1>¡ Visita nuestro <Link href='/blog'><span>Blog</span></Link> para ver todos los eventos !</h1>
-        {user ? (
-          <div className={styles.boxAdd}>
-            <BoxAdd />
-          </div>
-        ) : (
-          ''
-        )}
       </div>
+      
     </BasicLayout>
   )
 }

@@ -7,7 +7,7 @@ export function Footer() {
     <div className={styles.containerFooter}>
       <div className={styles.containerSucursal}>
         <div className={styles.titleSucursal}>
-          <h1>Nuestras sucursales</h1>
+          <h1>Nuestras ubicaciónes</h1>
         </div>
         <div className={styles.boxSucursal}>
           <div className={styles.direccionSucursal}>

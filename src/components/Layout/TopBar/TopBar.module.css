@@ -45,7 +45,7 @@
 }
 
 .topMenuSide{
-  padding: 30px 0 15px 0;
+  padding: 30px;
   width: 100%;
   height: auto;
   display: flex;
@@ -86,6 +86,21 @@
 
 .listaMenuSide div:active{
   background-color: var(--bg-btn-secondary);
+}
+
+.iconUser{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.iconUser a{
+  cursor: pointer;
+}
+
+.iconUser svg, .iconUser path{
+  cursor: pointer;
 }
 
 .menu{

@@ -9,6 +9,15 @@
 .ui.button, .ui.button.primary{
   color: azure !important;
   font-weight: 200 !important;
+  background-color: red !important;
+}
+
+.ui.button:hover{
+  background-color: rgb(255, 22, 22) !important;
+}
+
+.ui.button:active, .ui.button:focus{
+  background-color: rgb(255, 43, 43) !important;
 }
 
 .ui.button.secondary{
@@ -17,8 +26,7 @@
   background-color: darkgreen !important;
 }
 
-.ui.button.secondary svg{
-  margin-right: 5px;
+.ui.button.secondary svg, .ui.button.secondary path{
   cursor: pointer;
 }
 
@@ -37,14 +45,8 @@
   align-items: center;
 }
 
-.ui.button.negative svg{
-  margin-right: 5px;
+.ui.button.negative svg, .ui.button.negative path{
   cursor: pointer;
-}
-
-.ui.button:active, .ui.button:focus{
-  color: azure !important;
-  background-color: red !important;
 }
 
 .ui.button.primary{

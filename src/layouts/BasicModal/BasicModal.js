@@ -1,7 +1,20 @@
-import React from 'react'
+import { Modal } from "semantic-ui-react"
+import styles from './BasicModal.module.css'
 
-export default function BasicModal() {
+export function BasicModal(props) {
+
+  const {children, show, titleModalForm } = props
+
   return (
-    <div>BasicModal</div>
+    
+    <>
+      <Modal open={show} size="small" className={styles.modal}>
+        <Modal.Header className={styles.header}>
+          {titleModalForm}
+        </Modal.Header>
+        <Modal.Content className={styles.content}>{children}</Modal.Content>
+      </Modal>
+    </>
+
   )
 }

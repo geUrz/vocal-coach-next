@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { useAuth } from '@/hooks'
 import { Image } from 'semantic-ui-react'
 import { FaBars, FaHome, FaSignOutAlt, FaUser, FaWindowClose } from 'react-icons/fa'
-import { BiHome, BiMenu, BiUser } from 'react-icons/bi'
 import styles from './TopBar.module.css'
 
 
@@ -61,15 +60,12 @@ export function TopBar() {
         </div>
       </div>
 
-      <div className= {styles.containerMenuSide} style={{left : menu ? '0' : '-100%'}}>
-        <div className={styles.topMenuSide}>
-          <Link href='/'>
+      <div className= {styles.containerMenuSide} style={{left : menu ? '0' : '-100%'}}> 
+        <Link href='/'>
+          <div className={styles.topMenuSide}>
             <FaHome />
-          {/* <Image 
-            src='/img/home.png' alt='home' 
-            onClick={menuOpen} /> */}
-          </Link>
-        </div>   
+          </div>   
+        </Link>
         <div className={styles.listaMenuSide}>
           <Link href='/blog'>
             <div>
@@ -87,6 +83,11 @@ export function TopBar() {
             </div>
           </Link>
         </div>   
+        <div className={styles.iconUser}>
+          <Link href='/join/signin'>
+            <FaUser />
+          </Link>
+        </div>
       </div>
     </div>
 
