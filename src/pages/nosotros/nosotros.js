@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { map } from 'lodash'
-import { useAuth } from '@/hooks'
+//import { useAuth } from '@/hooks'
 import { BasicLayout } from '@/layouts'
 import { Nosotros as nosotrosApi } from '@/api'
 import { Image } from 'semantic-ui-react'
@@ -10,7 +10,7 @@ const ctrlNosotros = new nosotrosApi()
 
 export default function Nosotros() {
 
-  const {user} = useAuth()
+  //const {user} = useAuth()
 
   const [nosotros, setNosotros] = useState(null)
 

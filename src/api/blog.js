@@ -22,7 +22,7 @@ export class Blog{
   async getOne(){
     try {
       const sortFilter = 'sort=publishedAt:desc'
-      const paginationFilter = 'pagination[pageSize]=1'
+      const paginationFilter = 'pagination[limit]=1'
       const populateFilter = 'populate=*'
       const filters = `${sortFilter}&${populateFilter}&${paginationFilter}` 
       const url = `${ENV.API_URL}/${ENV.ENDPOINTS.BLOG}?${filters}`

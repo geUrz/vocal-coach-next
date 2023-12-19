@@ -40,12 +40,12 @@ export function Pub(props) {
     
     <>
       <div className={styles.sideImage}>
-      <div className={styles.imgContainerBlog}>
-         <div className={styles.imgBoxBlog}>
+        <div className={styles.imgContainerBlog}>
+          <div className={styles.imgBoxBlog}>
            <Image src={pub.image.data.attributes.url} /> 
-         </div>
-       </div> 
-       <div className={styles.containerArticulo}>
+          </div>   
+        </div>
+        <div className={styles.containerArticulo}>
          <h2>{pub.title}</h2>
          <p>{pub.content}</p>
 
@@ -71,8 +71,8 @@ export function Pub(props) {
           ) : (
             ''
           )}
-      </div>
-      </div>
+        </div>
+      </div> 
 
     <Confirm
       open={showConfirm}
