@@ -21,8 +21,8 @@ export function EditPubForm(props) {
         await ctrlBlog.update(formValue, pubId)
         formik.handleReset()
         onOpenCloseEdit()
-        //onReload()
-        toast.success(' ¡ Publicación editada correctamente ! ')
+        onReload()
+        toast.success(' ¡ Publicación editada exitosamente ! ')
       } catch (error) {
         toast.error(' ¡ Error al editar publicación ! ')
         console.error(error);

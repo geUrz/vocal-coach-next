@@ -62,23 +62,23 @@ export function TopBar() {
 
       <div className= {styles.containerMenuSide} style={{left : menu ? '0' : '-100%'}}> 
         <Link href='/'>
-          <div className={styles.topMenuSide}>
+          <div className={styles.topMenuSide} onClick={menuOpen}>
             <FaHome />
           </div>   
         </Link>
         <div className={styles.listaMenuSide}>
           <Link href='/blog'>
-            <div>
+            <div onClick={menuOpen}>
               Blog
             </div>
           </Link>
           <Link href='/nosotros'>
-            <div>
+            <div onClick={menuOpen}>
               Nosotros
             </div>
           </Link>
           <Link href='/contactanos'>
-            <div>
+            <div onClick={menuOpen}>
               Contáctanos
             </div>
           </Link>

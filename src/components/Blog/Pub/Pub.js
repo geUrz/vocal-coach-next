@@ -29,7 +29,7 @@ export function Pub(props) {
     try {
       await delBlog.delete(pubId)
       openCloseConfirm()
-      //onReload()
+      onReload()
       toast.warning(' ¡ Publicación eliminada exitosamente ! ')
     } catch (error) {
       console.error(error);

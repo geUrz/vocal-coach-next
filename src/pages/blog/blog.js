@@ -16,6 +16,10 @@ export default function Blog() {
 
   const {user} = useAuth()
 
+  const [reload, setReload] = useState(false)
+
+  const onReload = () => setReload((prevState) => !prevState)
+
   return (
     <BasicLayout relative>
       <div className={styles.imgContainerBanner}>
@@ -44,7 +48,7 @@ export default function Blog() {
           <CreatePubForm onOpenClose={onOpenClose} />
         </BasicModal>
 
-        <ListaPub />
+        <ListaPub reload={reload} onReload={onReload} />
         
       </div>
     </BasicLayout>
