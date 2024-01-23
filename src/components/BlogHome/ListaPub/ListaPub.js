@@ -1,26 +1,16 @@
 import { useEffect, useState } from "react"
-import { useAuth } from "@/hooks"
 import { map, size } from "lodash"
-import { Blog, BlogHome } from "@/api"
-import { Pub } from "../Pub"
+import { Blog } from "@/api"
 import { Loading } from "@/components/Layout/Loading"
 import { Image } from "semantic-ui-react"
-import { BasicModal } from "@/layouts/BasicModal"
-import { CreatePubForm } from "@/components/Blog/CreatePubForm"
 import styles from './ListaPub.module.css'
+import Slider from "react-slick"
 
 const ctrlBlog = new Blog()
 
-export function ListaPub(props) {
+export function ListaPub() {
 
-  const {reload, onReload, pubId, pub} = props
-
-  const [show, setShow] = useState(false)
-
-  const onOpenClose = () => setShow((prevState) => !prevState)
-
-  const {user} = useAuth()
-  const [blogs, setBlogs] = useState(null) 
+  const [blogs, setBlogs] = useState(null)
 
   useEffect(() => {
     (async () => {
@@ -28,38 +18,33 @@ export function ListaPub(props) {
         const response = await ctrlBlog.getOne()
         setBlogs(response.data)
       } catch (error) {
-          console.error(error)
+        console.error(error)
       }
     })()
-  }, [reload])
+  }, [])
 
   return (
-    
+
     <>
       {!blogs ? (
         <Loading />
-      ) : 
-      size(blogs) === 0 ? (
-        <div className={styles.listEmpty}>
-          <Image src='/img/hidelist.png' />
-          <h1>¡ Sin publicación !</h1>
-        </div>
-      ) : (
-        <div>
-          {map(blogs, (pub) => (
-            <Pub
-              key={pub.id} 
-              pubId={pub.id}
-              pub={pub.attributes}  
-              onReload={onReload}
-            />
-          ))}
-        </div>
-      )}
+      ) :
+        size(blogs) === 0 ? (
+          <div className={styles.listEmpty}>
+            <Image src='/img/hidelist.png' />
+            <h1>¡ Sin publicaciónes !</h1>
+          </div>
+        ) : (
+          <div className={styles.containerMainPub}>
+            <div className={styles.containerPub}>
+              <Image src={blogs[0].attributes.image.data.attributes.url} />
 
-      <BasicModal titleModalForm='Crear publicación' show={show} onClose={onOpenClose}>
-        <CreatePubForm onOpenClose={onOpenClose} onReload={onReload} pubId={pubId} pub={pub} />
-      </BasicModal>
+            </div>
+            <div className={styles.titlePub}>
+              <h2>{blogs[0].attributes.title}</h2>
+            </div>
+          </div>
+        )}
 
     </>
 

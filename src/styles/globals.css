@@ -25,7 +25,10 @@ body{
   background-color: black!important;
 }
 
-h1,h2,h3,h4{
-  margin: 0;
-  padding: 0;
+li.slick-active{
+  opacity: .3;
+}
+
+a{
+  cursor: pointer;
 }

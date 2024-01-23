@@ -1,4 +1,2 @@
-export * from './ListaPub'
-export * from './Pub'
-export * from './CreatePubForm'
-export * from './EditPubForm'
+export * from './ListPub'
+export * from './PubForm'

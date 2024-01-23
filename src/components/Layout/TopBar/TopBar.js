@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useAuth } from '@/hooks'
 import { Image } from 'semantic-ui-react'
-import { FaBars, FaHome, FaSignOutAlt, FaUser, FaWindowClose } from 'react-icons/fa'
+import { FaBars, FaHome, FaSignOutAlt, FaTimes, FaUser } from 'react-icons/fa'
 import styles from './TopBar.module.css'
 
 
@@ -17,6 +17,16 @@ export function TopBar() {
 
   const menuOpen = () => {
     setMenu(prevState => !prevState)
+  }
+
+  const toSignin = () => {
+    router.push('/join/signin')
+    //onReload()
+  }
+
+  const toAccount = () => {
+    router.push('account')
+    //onReload()
   }
 
   const logoutSignin = () => {
@@ -39,21 +49,21 @@ export function TopBar() {
         <Link href='/'>
           HOME
         </Link>
+        <Link href='/event'>
+          EVENTOS
+        </Link>
         <Link href='/blog'>
           BLOG
         </Link>
-        <Link href='/nosotros'>
-          NOSOTROS
-        </Link>
-        <Link href='/contactanos'>
-          CONTÁCTANOS
+        <Link href='/about'>
+          Qué es VocalCoach ?
         </Link>
       </div>
 
       <div className={styles.iconBar}>
         <div  onClick={menuOpen}>
           {menu ? (
-           <FaWindowClose />
+           <FaTimes />
           ) : (
             <FaBars />
           )}
@@ -67,26 +77,28 @@ export function TopBar() {
           </div>   
         </Link>
         <div className={styles.listaMenuSide}>
+        <Link href='/event'>
+            <div onClick={menuOpen}>
+              Eventos
+            </div>
+          </Link>
           <Link href='/blog'>
             <div onClick={menuOpen}>
               Blog
             </div>
           </Link>
-          <Link href='/nosotros'>
+          <Link href='/about'>
             <div onClick={menuOpen}>
-              Nosotros
+              Qué es VocalCoach ?
             </div>
           </Link>
-          <Link href='/contactanos'>
-            <div onClick={menuOpen}>
-              Contáctanos
-            </div>
-          </Link>
-        </div>   
+        </div> 
         <div className={styles.iconUser}>
-          <Link href='/join/signin'>
-            <FaUser />
-          </Link>
+          {user ? (
+            <FaUser onClick={toAccount}/>
+          ) : (
+            <FaUser onClick={toSignin} />
+          )}
         </div>
       </div>
     </div>

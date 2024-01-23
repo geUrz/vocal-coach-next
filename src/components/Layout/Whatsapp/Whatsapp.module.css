@@ -1,0 +1,27 @@
+.iconWhats{
+  position: fixed;
+  bottom: 35px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.iconWhats a{
+  cursor: pointer;
+}
+
+.iconWhats svg, .iconWhats path{
+  padding: 4px;
+  font-size: 50px;
+  border-radius: 50%;
+  background-color: var(--btn-primary);
+  cursor: pointer;
+}
+
+.iconWhats svg:hover{
+  background-color: var(--btn-primary-hover);
+}
+
+.iconWhats svg:active{
+  background-color: var(--btn-primary-active);
+}

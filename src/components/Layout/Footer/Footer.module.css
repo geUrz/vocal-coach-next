@@ -9,6 +9,12 @@
   position: relative;
 }
 
+.containerFooter svg, .containerFooter path{
+  margin-bottom: 20px;
+  font-size: 45px;
+  color: var(--btn-primary);
+}
+
 .containerSucursal, .containerSiguenos{
   width: 100%;
   height: 200px;
@@ -77,14 +83,16 @@
   background-color: azure;
 }
 
-.boxSiguenos{
+.boxIcons{
+  margin-top: 15px;
   align-items: baseline;
   justify-content: center;
 }
 
-.boxSiguenos img{
+.boxIcons svg, .boxIcons path{
   margin: 0 10px;
-  height: 35px;
+  color: var(--btn-primary);
+  font-size: 25px;
   cursor: pointer;
 }
 
@@ -105,74 +113,6 @@
 
 @media screen and (min-width: 800px) and (max-width: 1600px) {
 
-  .containerFooter{
-    height: 300px;
-    flex-direction: initial;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  
-  .containerSucursal, .containerSiguenos{
-    margin-top: 80px;
-    width: 50%;
-    height: auto;
-    justify-content: center;
-  }
-  
-  .titleSucursal h4, .titleSiguenos h4{
-    font-size: 14px;
-  }
-  
-  .boxSucursal, .boxSiguenos{
-    padding: 10px;
-    width: 80%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  .direccionSucursal h4{
-    margin: 0;
-    font-size: 12.5px;
-    font-weight: 200;
-  }
-  
-  .direccionSucursal h4:nth-child(1){
-    font-size: 14px;
-    color: var(--text-title1);
-  }
-  
-  .divisionSucursal{
-    margin: 0 5px;
-    width: 1px;
-    height: 70%;
-    background-color: azure;
-  }
-  
-  .boxSiguenos{
-    align-items: baseline;
-    justify-content: center;
-  }
-  
-  .boxSiguenos img{
-    height: 50px;
-    cursor: pointer;
-  }
-  
-  .copy{
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 20px;
-  }
-  
-  .copy h4{
-    font-size: 12.5px;
-    font-weight: 200;
-    color: gray;
-  }
+
 
 }

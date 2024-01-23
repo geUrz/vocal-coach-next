@@ -17,3 +17,48 @@
   font-weight: 200;
   color: azure;
 }
+
+.containerMainPub{
+  margin-top: 30px;
+  padding: .8rem;
+  width: 50%;
+  min-width: 350px;
+  max-width: 500px;
+  background-color: black;
+}
+
+.containerPub{
+  overflow: hidden;
+}
+
+.titlePub{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titlePub h2{
+  margin-top: 10px !important;
+  color: azure !important;
+  font-family: 'Bebas' !important;
+  font-size: 16px;
+  font-weight: 200 !important;
+}
+
+@media screen and (min-width: 800px){
+
+  .containerMainPub{
+    margin-top: 50px;
+  }
+
+  .titlePub{
+    height: 60px;
+  }
+
+  .titlePub h2{
+    font-size: 25px
+  }
+
+}

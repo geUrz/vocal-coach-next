@@ -6,59 +6,65 @@
   background-color: var(--background3) !important;
 }
 
-.ui.button, .ui.button.primary{
+.ui.button{
+  padding: 12px;
   color: azure !important;
   font-weight: 200 !important;
-  background-color: red !important;
-}
-
-.ui.button:hover{
-  background-color: rgb(255, 22, 22) !important;
-}
-
-.ui.button:active, .ui.button:focus{
-  background-color: rgb(255, 43, 43) !important;
-}
-
-.ui.button.secondary{
-  display: flex;
-  align-items: center;
-  background-color: darkgreen !important;
-}
-
-.ui.button.secondary svg, .ui.button.secondary path{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   cursor: pointer;
 }
 
-.ui.button.secondary:hover{
-  color: azure !important;
-  background-color: rgb(0, 117, 0) !important;
+.ui.button svg, .ui.button path{
+  margin-right: 5px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-.ui.button.secondary:active, .ui.button.secondary:focus{
-  color: azure !important;
-  background-color: rgb(0, 139, 0) !important;
-}
-
-.ui.button.negative{
-  display: flex;
-  align-items: center;
-}
-
-.ui.button.negative svg, .ui.button.negative path{
+.ui.button h4{
+  font-size: 10px;
+  font-weight: 200;
+  display: flex !important;
+  justify-content: center !important;
   cursor: pointer;
 }
 
 .ui.button.primary{
-  background-color: darkcyan !important;
+  background-color: var(--btn-primary) !important;
 }
 
 .ui.button.primary:hover{
-  color: azure !important;
-  background-color: rgb(0, 148, 148) !important;
+  background-color: var(--btn-primary-hover) !important;
 }
 
-.ui.button.primary:active, .ui.button.primary:focus{
-  color: azure !important;
-  background-color: rgb(0, 158, 158) !important;
+.ui.button.primary:active{
+  background-color: var(--btn-primary-active) !important;
+}
+
+.ui.button.secondary{
+  background-color: var(--btn-secondary) !important;
+}
+
+.ui.button.secondary:hover{
+  background-color: var(--btn-secondary-hover) !important;
+}
+
+.ui.button.secondary:active{
+  background-color: var(--btn-secondary-active) !important;
+}
+
+.ui.button.negative{
+  background-color: red !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ui.button.negative:hover{
+  background-color: rgb(255, 22, 22) !important;
+}
+
+.ui.button.negative:active{
+  background-color: rgb(255, 43, 43) !important;
 }

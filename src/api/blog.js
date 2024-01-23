@@ -19,10 +19,26 @@ export class Blog{
     }
   }
 
+  async getById(id){
+    try {
+      const filter = `filters[id][$eq]=${id}`
+      const url = `${ENV.API_URL}/${ENV.ENDPOINTS.BLOG}?${filter}`
+      const response = await fetch(url)
+      const result = await response.json()
+
+      if(response.status !== 200) throw result
+
+      return result.data[0]
+
+    } catch (error) {
+        throw error
+    }
+  }
+
   async getOne(){
     try {
       const sortFilter = 'sort=publishedAt:desc'
-      const paginationFilter = 'pagination[limit]=1'
+      const paginationFilter = 'pagination[limit]=3'
       const populateFilter = 'populate=*'
       const filters = `${sortFilter}&${populateFilter}&${paginationFilter}` 
       const url = `${ENV.API_URL}/${ENV.ENDPOINTS.BLOG}?${filters}`

@@ -55,11 +55,11 @@
 }
 
 .topMenuSide:hover{
-  background-color: var(--bg-btn-hover-secondary);
+  background-color: var(--btn-secondary-hover);
 }
 
-.topMenuSide:active, .topMenuSide:focus{
-  background-color: var(--bg-btn-secondary);
+.topMenuSide:active{
+  background-color: var(--btn-secondary-active);
 }
 
 .topMenuSide svg, .topMenuSide path{
@@ -81,17 +81,15 @@
 }
 
 .listaMenuSide div:hover{
-  background-color: var(--bg-btn-hover-secondary);
+  background-color: var(--btn-secondary-hover);
 }
 
 .listaMenuSide div:active{
-  background-color: var(--bg-btn-secondary);
+  background-color: var(--btn-secondary-active);
 }
 
 .iconUser{
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  padding: 12px;
   cursor: pointer;
 }
 
@@ -100,6 +98,16 @@
 }
 
 .iconUser svg, .iconUser path{
+  cursor: pointer;
+}
+
+.iconUser svg:hover path{
+  color: var(--btn-secondary-hover);
+  cursor: pointer;
+}
+
+.iconUser svg:active path{
+  color: var(--btn-secondary-active);
   cursor: pointer;
 }
 

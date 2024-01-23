@@ -4,9 +4,7 @@ import { Image } from "semantic-ui-react"
 import { ListaPub } from "@/components/BlogHome"
 import styles from './home.module.css'
 
-export default function Home(props) {
-
-  
+export default function Home() {  
 
   return (
     <BasicLayout relative>
@@ -48,11 +46,12 @@ export default function Home(props) {
       </div>
 
       <div className={styles.containerMainBlog}>
-        <h1>Evento mas reciente de <span> Vocal Coach</span></h1>
+        <h1>Eventos mas recientes de</h1>
+        <h2> Vocal Coach</h2>
 
           <ListaPub />
           
-        <h1>¡ Visita nuestro <Link href='/blog'><span>Blog</span></Link> para ver todos los eventos !</h1>
+        <h1>¡ Haz click <Link href='/event'><span>aqui</span></Link> para ver todos los eventos !</h1>
       </div>
       
     </BasicLayout>

@@ -9,8 +9,9 @@ export const ENV = {
       LOGIN: 'auth/local'
     },
     USERS_ME: 'users/me',
+    EVENT: 'events',
     BLOG: 'blogs',
-    NOSOTROS: 'nosotros'
+    ABOUT: 'abouts'
   },
   TOKEN: 'token'
 }
