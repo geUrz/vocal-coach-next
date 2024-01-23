@@ -1,0 +1,2 @@
+- [ ] hacer peticion para las imagenes y renderizarlo por post. (galleria).
+- [ ] subir la galeria.
