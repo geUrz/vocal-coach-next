@@ -87,9 +87,7 @@ export function EventForm(props) {
       }
     },
   });
-  useEffect(() => {
-    console.log("form", form);
-  }, [form]);
+
   return (
     <>
       <div className={styles.iconClose} onClick={onOpenClose}>
