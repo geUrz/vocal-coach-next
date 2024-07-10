@@ -3,10 +3,10 @@
   --background2: rgba(25, 25, 25);
   --background3: rgba(35, 35, 35);
   --background4: rgba(50, 50, 50);
-  --btn-primary: rgb(0, 160, 190);
-  --btn-primary-hover: rgb(0, 179, 199);
-  --btn-primary-active: rgb(0, 199, 218);
-  --btn-secondary: rgb(173, 0, 236);
+  --btn-primary: #00a0be;
+  --btn-primary-hover: #00b3c7;
+  --btn-primary-active: #00c7da;
+  --btn-secondary: #ad00ec;
   --btn-secondary-hover: rgb(189, 28, 248);
   --btn-secondary-active: rgba(195, 51, 248);
   --text-title1: rgb(0, 202, 222);

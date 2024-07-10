@@ -1,0 +1,39 @@
+.sectionBox{
+  margin: 10px 0;
+  width: 10px;
+  height: 1px;
+  background-color: #808080;
+}
+
+.container{
+  margin: 50px 0;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  font-size: 25px;
+  font-family: 'Bebas' !important;
+  font-weight: 200 !important;
+  color: #808080;
+  transition: color 2s;
+}
+
+.container:hover h1:nth-child(1){
+  color: var(--text-title2);
+  /* transition: all ease-in-out 2s; */
+}
+
+.box{
+  width: auto !important;
+}
+
+.box p{
+  font-size: 14.5px;
+  font-weight: 200;
+  text-align: center;
+}

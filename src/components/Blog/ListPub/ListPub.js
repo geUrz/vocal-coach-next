@@ -11,7 +11,7 @@ const ctrlBlog = new Blog()
 
 export function ListPub(props) {
 
-  const {pub, pubId, reload, onReload} = props
+  const {reload, onReload} = props
 
   const [show, setShow] = useState(false)
 

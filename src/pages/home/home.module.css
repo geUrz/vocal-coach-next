@@ -36,7 +36,7 @@
   color: var(--text-title2);
 }
 
-.tecnicasVoz{
+.containerVoiceTech{
   padding: 30px 0;
   width: 100%;
   height: auto;
@@ -45,63 +45,6 @@
   align-items: center;
   justify-content: center;
   background-color: var(--background1);
-}
-
-.tecnicasVozBox{
-  margin: 50px 0;
-  width: 80%;
-  height: auto;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
-}
-
-.boxTitle1 h1, .boxTitle2 h1{
-  font-size: 25px;
-  font-family: 'Bebas' !important;
-  color: var(--background4);
-  transition: color 2s;
-}
-
-.tecnicasVozBox:hover h1:nth-child(1){
-  color: var(--text-title2);
-  /* transition: all ease-in-out 2s; */
-}
-
-.tecnicasVozBox div{
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tecnicasVozBox div:nth-child(2){
-  margin: 15px 0;
-  width: 10%;
-  height: 2px;
-  background-color: var(--background4);
-  transition: 2.5s;
-}
-
-.tecnicasVozBox:hover div:nth-child(2){
-  width: 65%;
-  background-color: var(--text-title1); 
-}
-
-.box1, .box2{
-  width: auto !important;
-}
-
-.box1 p, .box2 p{
-  font-size: 14.5px;
-  font-weight: 200;
-  text-align: center;
-}
-
-.tecnicasVozBox h2{
-  font-size: 18px;
 }
 
 .boxYmas{

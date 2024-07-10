@@ -10,8 +10,6 @@
 }
 
 .containerFooter svg, .containerFooter path{
-  margin-bottom: 20px;
-  font-size: 45px;
   color: var(--btn-primary);
 }
 

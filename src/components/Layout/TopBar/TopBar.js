@@ -9,30 +9,10 @@ import styles from './TopBar.module.css'
 
 export function TopBar() {
 
-  const {user, logout} = useAuth()
-
-  const router = useRouter()
-
   const [menu, setMenu] = useState()
 
   const menuOpen = () => {
     setMenu(prevState => !prevState)
-  }
-
-  const toSignin = () => {
-    router.push('/join/signin')
-    //onReload()
-  }
-
-  const toAccount = () => {
-    router.push('account')
-    //onReload()
-  }
-
-  const logoutSignin = () => {
-    //router.push('/')
-    //onReload()
-    logout()
   }
 
   return (
@@ -93,24 +73,7 @@ export function TopBar() {
             </div>
           </Link>
         </div> 
-        <div className={styles.iconUser}>
-          {user ? (
-            <FaUser onClick={toAccount}/>
-          ) : (
-            <FaUser onClick={toSignin} />
-          )}
-        </div>
       </div>
-    </div>
-
-    <div className={styles.iconLogout}>
-      {user ? (
-        <div onClick={logoutSignin}>
-          <FaSignOutAlt />
-        </div>
-      ) : (
-        ''
-      )}
     </div>
 
   </>

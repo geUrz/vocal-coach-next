@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Image } from 'semantic-ui-react'
+import { motion } from 'framer-motion'
 import styles from './Footer.module.css'
 import { FaFacebook, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa'
 
@@ -15,7 +15,13 @@ export function Footer(props) {
 
         <div className={styles.containerFooter}>
           <div className={styles.containerSucursal}>
-            <FaMapMarkerAlt />
+            <motion.div
+              whileInView={{ scale: 5, translateY: -20 }}
+              transition={{ duration: 2, ease: 'easeOut' }}
+              viewport={{ once: false, margin: '0px' }}
+            >
+              <FaMapMarkerAlt size='10px' />
+            </motion.div>
             <div className={styles.titleSucursal}>
               <h1>Nuestras ubicaciónes</h1>
             </div>
