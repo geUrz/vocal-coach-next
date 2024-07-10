@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Image } from 'semantic-ui-react'
-import { useAuth } from '@/hooks'
 import { BasicLayout } from '@/layouts'
 import { BasicModal } from '@/layouts/BasicModal'
 import { EventForm, ListEvent } from '@/components/Event'
@@ -13,14 +12,8 @@ export default function Eventos() {
   
   const onOpenClose = () => setShow((prevState) => !prevState)
 
-  const {user} = useAuth()
-
-  const [reload, setReload] = useState(false)
-
-  const onReload = () => setReload((prevState) => !prevState)
-
   return (
-    <BasicLayout relative onReload={onReload}>
+    <BasicLayout relative>
       <div className={styles.imgContainerBanner}>
         <Image src='/img/ev3.png' alt='ev3' />
         <div>
@@ -28,21 +21,6 @@ export default function Eventos() {
         </div>
       </div>
       <div className={styles.containerMainBlog}>
-        
-        {user ? (
-          <Add add='Crear nuevo evento' onOpenClose={onOpenClose} />
-        ) : (
-          ''
-        )}
-
-        <BasicModal 
-          titleModalForm='Crear evento' 
-          show={show} 
-          onClose={onOpenClose}>
-          <EventForm onOpenClose={onOpenClose} />
-        </BasicModal>
-
-        <ListEvent reload={reload} onReload={onReload} />
         
       </div>
     </BasicLayout>

@@ -1,7 +1,5 @@
 import { BasicLayout } from '@/layouts'
-import { ListPub, PubForm } from '@/components/Blog'
 import { useState } from 'react'
-import { useAuth } from '@/hooks'
 import { Add } from '@/components/Layout/Add'
 import { BasicModal } from '@/layouts/BasicModal'
 import { Image } from 'semantic-ui-react'
@@ -13,14 +11,8 @@ export default function Blog() {
   
   const onOpenClose = () => setShow((prevState) => !prevState)
 
-  const {user} = useAuth()
-
-  const [reload, setReload] = useState(false)
-
-  const onReload = () => setReload((prevState) => !prevState)
-
   return (
-    <BasicLayout relative onReload={onReload}>
+    <BasicLayout relative>
       
       <div className={styles.imgContainerBanner}>
         <Image src='/img/ev3.png' alt='ev3' />
@@ -29,21 +21,7 @@ export default function Blog() {
         </div>
       </div>
       <div className={styles.containerMainBlog}>
-        
-        {user ? (
-          <Add add='Crear nuevo evento' onOpenClose={onOpenClose} />
-        ) : (
-          ''
-        )}
-
-        <BasicModal
-          titleModalForm='Crear evento' 
-          show={show} 
-          onClose={onOpenClose}>
-          <PubForm onOpenClose={onOpenClose} />
-        </BasicModal>
-
-        <ListPub reload={reload} onReload={onReload} />
+      
         
       </div>
 
