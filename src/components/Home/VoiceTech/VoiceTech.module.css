@@ -19,7 +19,7 @@
   font-size: 25px;
   font-family: 'Bebas' !important;
   font-weight: 200 !important;
-  color: #808080;
+  color: #474747;
   transition: color 2s;
 }
 
@@ -36,4 +36,5 @@
   font-size: 14.5px;
   font-weight: 200;
   text-align: center;
+  color: #474747;
 }

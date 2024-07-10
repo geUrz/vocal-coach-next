@@ -10,7 +10,7 @@ export function VoiceTech(props) {
     <div className={styles.container}>
       <motion.h1 
         className={styles.title}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.2, ease: 'easeInOut' }}
         whileInView={{
           color: '#00c7da',
         }}
@@ -28,7 +28,17 @@ export function VoiceTech(props) {
         }}
         viewport={{ once: false, margin: '-25% 100% -50% 100%' }}
       />
-      <div className={styles.box}><p>{description}</p></div>
+      <div className={styles.box}>
+        <motion.p
+          transition={{ duration: 0.5 }}
+          whileInView={{
+            color: '#fff',
+          }}
+          viewport={{ once: false, margin: '-25% 100% -50% 100%' }}
+        >
+          {description}
+        </motion.p>
+      </div>
     </div>
 
   )
