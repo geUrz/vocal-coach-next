@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { useAuth } from '@/hooks'
 import { Image } from 'semantic-ui-react'
-import { FaBars, FaHome, FaSignOutAlt, FaTimes, FaUser } from 'react-icons/fa'
+import { FaBars, FaHome, FaTimes } from 'react-icons/fa'
 import styles from './TopBar.module.css'
 
 

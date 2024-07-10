@@ -1,10 +1,5 @@
 export * from './TopBar'
 export * from './Footer'
 export * from './Whatsapp'
-export * from './Confirm'
-export * from './noImage'
-export * from './SlideImage'
-export * from './Add'
-export * from './Confirm'
-export * from './Loading'
-export * from './ListEmpty'
+
+

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { TopBar, Footer, Whatsapp } from '@/components/Layout'
 import classNames from 'classnames'
 import styles from './BasicLayout.module.css'

@@ -1,15 +1,9 @@
 import { BasicLayout } from '@/layouts'
 import { useState } from 'react'
-import { Add } from '@/components/Layout/Add'
-import { BasicModal } from '@/layouts/BasicModal'
 import { Image } from 'semantic-ui-react'
 import styles from './blog.module.css'
 
 export default function Blog() {
-
-  const [show, setShow] = useState(false)
-  
-  const onOpenClose = () => setShow((prevState) => !prevState)
 
   return (
     <BasicLayout relative>

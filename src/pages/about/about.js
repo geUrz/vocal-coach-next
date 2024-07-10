@@ -1,27 +1,10 @@
 import { useState, useEffect } from 'react'
-import { map } from 'lodash'
 import { BasicLayout } from '@/layouts'
 import { Image } from 'semantic-ui-react'
-import { About as AboutApi } from '@/api'
 import styles from './about.module.css'
 
-const aboutCtrl = new AboutApi()
 
 export default function About() {
-
-  const [abouts, setAbouts] = useState(null)
-
-  useEffect(() => {
-    (async() => {
-      try {
-        const response = await aboutCtrl.getAll()
-        setAbouts(response.data)
-      } catch (error) {
-          console.error(error)
-      }
-      })()
-  }, [])
-
 
   return (
     <BasicLayout relative>
