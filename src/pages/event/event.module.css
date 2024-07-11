@@ -22,6 +22,25 @@
   color: var(--text-title1);
 }
 
+.sectionEv{
+  padding: 30px 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background1);
+}
+
+.containerEv{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 @media screen and (min-width: 800px) {
 

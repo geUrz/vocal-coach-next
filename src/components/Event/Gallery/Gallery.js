@@ -12,7 +12,7 @@ import 'swiper/css/thumbs'
 
 export function Gallery(props) {
 
-  const { onOpenClose } = props
+  const { img1, img2, img3, onOpenClose } = props
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
 
@@ -35,13 +35,16 @@ export function Gallery(props) {
           className="mySwiper2"
         >
           <SwiperSlide>
-            <Image src="img/ev1/ev1.jpg" />
+            <Image src={`/img/${img1}`} />
+            <h1>titulo</h1>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="img/ev1/ev2.jpg" />
+            <Image src={`/img/${img2}`} />
+            <h1>titulo</h1>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="img/ev1/ev3.jpg" />
+            <Image src={`/img/${img3}`} />
+            <h1>titulo</h1>
           </SwiperSlide>
         </Swiper>
         <Swiper
@@ -54,13 +57,13 @@ export function Gallery(props) {
           className="mySwiper"
         >
           <SwiperSlide>
-            <Image src="img/ev1/ev1.jpg" />
+            <Image src={`/img/${img1}`} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="img/ev1/ev2.jpg" />
+            <Image src={`/img/${img3}`} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src="img/ev1/ev3.jpg" />
+            <Image src={`/img/${img3}`} />
           </SwiperSlide>
         </Swiper>
       </div>

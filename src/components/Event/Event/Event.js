@@ -7,7 +7,7 @@ import { FaChevronRight } from 'react-icons/fa'
 
 export function Event(props) {
 
-  const { title, description, image } = props
+  const { title, description, image, img1, img2, img3 } = props
 
   const [show, setShow] = useState(false)
   
@@ -16,9 +16,7 @@ export function Event(props) {
   return (
 
     <>
-
-      <div className={styles.section}>
-        <div className={styles.container}>
+        <div className={styles.boxEv}>
           <div className={styles.img}>
             <Image src={`/img/${image}`} />
           </div>
@@ -27,14 +25,14 @@ export function Event(props) {
             <p>{description}</p>
           </div>
           <div className={styles.verImg} onClick={onOpenClose}>
-            <h2>ver imágenes</h2>
+            <h2>Ver imágenes</h2>
             <FaChevronRight />
           </div>
         </div>
-      </div>
+
 
       <ModalImage show={show} onClose={onOpenClose}>
-        <Gallery onOpenClose={onOpenClose} />
+        <Gallery onOpenClose={onOpenClose} img1={img1} img2={img2} img3={img3} />
       </ModalImage>
 
     </>

@@ -62,7 +62,7 @@
 }
 
 .topMenuSide svg, .topMenuSide path{
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
 }
 
@@ -71,7 +71,7 @@
   padding: 12px;
   width: 100%;
   height: auto;
-  font-size: small;
+  font-size: 14px;
   font-weight: 200;
   display: flex;
   align-items: center;

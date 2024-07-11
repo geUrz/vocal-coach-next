@@ -13,12 +13,30 @@ export default function Eventos() {
           <h1>eventos y conciertos</h1>
         </div>
       </div>
-      
-      <Event
-        title='Presentación'
-        description='Lorem ipsum dolor sit amet consectetur adipiscing elit pretium, nibh viverra ac eu malesuada dignissim penatibus curabitur, conubia libero fermentum non tincidunt fusce condimentum. Netus sociis fringilla malesuada fermentum cras ridiculus et, lectus primis sociosqu etiam arcu lobortis nisi libero, pulvinar luctus sodales mus pretium sed.'
-        image='ev1.png'
-      />
+
+      <div className={styles.sectionEv}>
+        <div className={styles.containerEv}>
+
+          <Event
+            title='Presentación'
+            description='Lorem ipsum dolor sit amet consectetur adipiscing elit pretium, nibh viverra ac eu malesuada dignissim penatibus curabitur, conubia libero fermentum non tincidunt fusce condimentum. Netus sociis fringilla malesuada fermentum cras ridiculus et, lectus primis sociosqu etiam arcu lobortis nisi libero, pulvinar luctus sodales mus pretium sed.'
+            image='ev1/ev3.jpg'
+            img1='ev1/ev1.jpg'
+            img2='ev1/ev2.jpg'
+            img3='ev1/ev3.jpg'
+          />
+
+          <Event
+            title='Presentación'
+            description='Lorem ipsum dolor sit amet consectetur adipiscing elit pretium, nibh viverra ac eu malesuada dignissim penatibus curabitur, conubia libero fermentum non tincidunt fusce condimentum. Netus sociis fringilla malesuada fermentum cras ridiculus et, lectus primis sociosqu etiam arcu lobortis nisi libero, pulvinar luctus sodales mus pretium sed.'
+            image='ev2/ev2.jpg'
+            img1='ev2/ev1.jpg'
+            img2='ev2/ev2.jpg'
+            img3='ev2/ev3.jpg'
+          />
+
+        </div>
+      </div>
 
     </BasicLayout>
   )

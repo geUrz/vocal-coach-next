@@ -17,7 +17,7 @@ export default function Home() {
       <div className={styles.titleVoz}>
         <h1>En <span className={styles.titleVoz1}>Vocal Coach</span> aprenderás las técnicas</h1>
         <h1>necesarias para
-          <span className={styles.titleVoz2}> ¡Cantar Mejor!.</span></h1>
+          <span className={styles.titleVoz2}> ¡ Cantar Mejor !.</span></h1>
       </div>
 
       <div className={styles.containerVoiceTech}>
